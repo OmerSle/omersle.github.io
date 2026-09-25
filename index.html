@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Omer Slezovic — Digital & Growth Marketing Strategist. Paid acquisition, lifecycle, CRO, landing pages and AI-enabled marketing." />
+  <title>Omer Slezovic — Growth Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --paper:#f4f0e8;
+      --paper2:#ebe5da;
+      --ink:#111111;
+      --muted:#6d6a63;
+      --line:rgba(17,17,17,.15);
+      --blue:#3155ff;
+      --blue2:#1f3fcf;
+      --coral:#ff5a36;
+      --white:#fffdf8;
+      --dark:#111317;
+      --radius:26px;
+      --shadow:0 24px 80px rgba(28,24,16,.12);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+      font-family:"DM Sans",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      overflow-x:hidden;
+    }
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+
+    .shell{width:min(1440px,calc(100% - 44px));margin:0 auto}
+    .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+    .serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+    .blue{color:var(--blue)}
+    .coral{color:var(--coral)}
+
+    nav{
+      min-height:82px;display:flex;align-items:center;justify-content:space-between;
+      border-bottom:1px solid var(--line);position:relative;z-index:5;
+    }
+    .brand{font-weight:700;letter-spacing:-.03em;font-size:18px}
+    .navlinks{display:flex;align-items:center;gap:26px;font-size:13px}
+    .navlinks a{opacity:.74;transition:.2s}
+    .navlinks a:hover{opacity:1}
+    .nav-cta{border:1px solid var(--ink);padding:10px 14px;border-radius:999px;opacity:1!important}
+
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:center;min-height:760px;padding:70px 0 88px}
+    .hero h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:clamp(72px,8vw,130px);line-height:.86;letter-spacing:-.045em;margin:26px 0 30px;max-width:930px}
+    .hero h1 em{font-style:italic;color:var(--blue)}
+    .hero-sub{font-size:18px;line-height:1.55;max-width:680px;color:#33312d}
+    .hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+    .pill{border:1px solid var(--line);background:rgba(255,255,255,.28);border-radius:999px;padding:9px 13px;font-size:12px;font-weight:600}
+    .hero-actions{display:flex;gap:14px;margin-top:34px;align-items:center;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 18px;border-radius:999px;border:1px solid var(--ink);font-weight:700;font-size:13px;transition:.2s}
+    .btn.primary{background:var(--ink);color:var(--paper)}
+    .btn:hover{transform:translateY(-2px)}
+
+    .portrait-wrap{position:relative;min-height:610px;display:flex;align-items:center;justify-content:center}
+    .portrait-bg{position:absolute;inset:42px 10px 18px 74px;background:var(--blue);border-radius:42% 58% 52% 48% / 42% 36% 64% 58%;transform:rotate(-4deg)}
+    .portrait-card{position:relative;width:min(100%,520px);aspect-ratio:4/5;border-radius:34px;overflow:hidden;box-shadow:var(--shadow);background:#ddd;transform:rotate(2deg)}
+    .portrait-card img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+    .portrait-note{position:absolute;left:-16px;bottom:52px;background:var(--white);border:1px solid var(--line);padding:14px 18px;border-radius:16px;font-family:"Instrument Serif",serif;font-size:28px;line-height:.98;transform:rotate(-5deg);box-shadow:0 14px 40px rgba(0,0,0,.08)}
+    .system-orbit{position:absolute;right:-8px;top:36px;width:145px;height:145px;border:1px solid rgba(17,17,17,.25);border-radius:50%;display:grid;place-items:center;font-size:11px;text-transform:uppercase;letter-spacing:.12em;text-align:center;background:rgba(244,240,232,.72);backdrop-filter:blur(5px)}
+    .system-orbit:before,.system-orbit:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(17,17,17,.12)}
+    .system-orbit:before{width:105px;height:105px}.system-orbit:after{width:60px;height:60px}
+
+    .statement{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0;overflow:hidden}
+    .ticker{font-family:"Instrument Serif",serif;font-size:42px;white-space:nowrap;display:flex;gap:24px;align-items:center}
+    .ticker span.dot{width:9px;height:9px;background:var(--coral);border-radius:50%;display:inline-block}
+
+    .section{padding:110px 0}
+    .section-head{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:end;margin-bottom:58px}
+    .section-head h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(54px,7vw,92px);line-height:.93;letter-spacing:-.035em;margin:0;max-width:850px}
+    .section-head p{max-width:690px;color:var(--muted);font-size:17px;line-height:1.65;margin:20px 0 0}
+
+    .case{display:grid;grid-template-columns:.72fr 1.28fr;gap:50px;padding:62px 0;border-top:1px solid var(--line);align-items:start}
+    .case:first-of-type{border-top:0}
+    .case.copy-right{grid-template-columns:1.28fr .72fr}
+    .case.copy-right .case-copy{order:2}.case.copy-right .case-visual{order:1}
+    .case-num{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+    .case-copy h3{font-family:"Instrument Serif",serif;font-size:clamp(42px,5vw,66px);line-height:.96;font-weight:400;letter-spacing:-.03em;margin:0 0 24px}
+    .case-copy p{font-size:16px;line-height:1.7;color:#47443e;max-width:520px}
+    .tags{display:flex;gap:7px;flex-wrap:wrap;margin:24px 0 30px}
+    .tags span{font-size:11px;text-transform:uppercase;letter-spacing:.08em;border:1px solid var(--line);padding:8px 10px;border-radius:999px;background:rgba(255,255,255,.25)}
+    .micro-result{margin-top:28px;padding-top:23px;border-top:1px solid var(--line);display:flex;gap:34px;flex-wrap:wrap}
+    .micro-result b{display:block;font-family:"Instrument Serif",serif;font-size:38px;font-weight:400;line-height:1}
+    .micro-result small{display:block;margin-top:7px;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.1em}
+
+    .browser{border:1px solid rgba(17,17,17,.16);border-radius:22px;background:#fbfaf7;box-shadow:var(--shadow);overflow:hidden}
+    .browser-top{height:44px;border-bottom:1px solid rgba(17,17,17,.12);display:flex;align-items:center;padding:0 15px;gap:7px;background:#eeeae2}
+    .browser-top i{width:9px;height:9px;border-radius:50%;background:#b9b4aa}.browser-top i:nth-child(1){background:#ff725c}.browser-top i:nth-child(2){background:#e8b83e}.browser-top i:nth-child(3){background:#55b968}
+    .browser-url{margin-left:8px;font-size:11px;color:#77736d;border:1px solid rgba(0,0,0,.08);background:rgba(255,255,255,.55);border-radius:999px;padding:6px 12px;flex:1;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .long-shot{height:640px;overflow-y:auto;overflow-x:hidden;position:relative;background:#08131f;scrollbar-width:thin;scrollbar-color:rgba(49,85,255,.7) rgba(255,255,255,.08);overscroll-behavior:contain}
+    .long-shot::-webkit-scrollbar{width:9px}
+    .long-shot::-webkit-scrollbar-track{background:rgba(255,255,255,.08)}
+    .long-shot::-webkit-scrollbar-thumb{background:rgba(49,85,255,.72);border-radius:999px;border:2px solid transparent;background-clip:padding-box}
+    .long-shot img{width:100%;height:auto;transform:none!important;transition:none!important}
+    .scroll-hint{position:sticky;float:right;bottom:15px;margin:-50px 15px 15px 0;padding:9px 12px;background:rgba(17,17,17,.78);color:white;border-radius:999px;font-size:10px;text-transform:uppercase;letter-spacing:.09em;backdrop-filter:blur(6px);pointer-events:none;transition:opacity .25s ease,transform .25s ease}
+    .long-shot.scrolled .scroll-hint{opacity:0;transform:translateY(6px)}
+
+    .dark-case{background:var(--dark);color:white;padding:100px 0;margin:30px 0}
+    .dark-case .case{border-color:rgba(255,255,255,.14)}
+    .dark-case .case-copy p{color:rgba(255,255,255,.68)}
+    .dark-case .tags span{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.04)}
+    .dark-case .case-num,.dark-case .micro-result small{color:rgba(255,255,255,.5)}
+    .dark-case .micro-result{border-color:rgba(255,255,255,.14)}
+
+    .proof{padding:110px 0}
+    .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:50px}
+    .proof-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:0 18px 70px rgba(30,25,15,.06)}
+    .proof-card.wide{grid-column:1/-1}
+    .proof-card img{width:100%;border-radius:16px;border:1px solid rgba(17,17,17,.12)}
+    .proof-caption{display:flex;justify-content:space-between;gap:25px;padding:20px 4px 4px;align-items:flex-start}
+    .proof-caption h3{margin:0;font-family:"Instrument Serif",serif;font-size:34px;font-weight:400}
+    .proof-caption p{margin:8px 0 0;color:var(--muted);font-size:14px;line-height:1.55;max-width:650px}
+    .proof-badge{white-space:nowrap;background:#e7ecff;color:var(--blue2);padding:8px 11px;border-radius:999px;font-size:10px;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+
+    .results-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:52px}
+    .result-cell{padding:32px 20px;border-right:1px solid var(--line)}.result-cell:last-child{border-right:0}
+    .result-cell b{font-family:"Instrument Serif",serif;font-size:52px;font-weight:400;line-height:1}
+    .result-cell span{display:block;margin-top:10px;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.1em}
+
+    .about{padding:120px 0;background:#dfe5ff}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}
+    .about h2{font-family:"Instrument Serif",serif;font-size:clamp(56px,7vw,96px);line-height:.9;font-weight:400;letter-spacing:-.04em;margin:0}
+    .about-copy{font-size:20px;line-height:1.6;max-width:720px}
+    .expertise{display:grid;grid-template-columns:repeat(2,1fr);margin-top:50px;border-top:1px solid rgba(17,17,17,.2)}
+    .expertise div{padding:18px 0;border-bottom:1px solid rgba(17,17,17,.2);font-size:14px}.expertise div:nth-child(odd){padding-right:30px}
+
+    footer{background:var(--ink);color:var(--paper);padding:100px 0 36px}
+    footer h2{font-family:"Instrument Serif",serif;font-size:clamp(60px,9vw,128px);font-weight:400;line-height:.86;letter-spacing:-.04em;margin:0;max-width:1100px}
+    footer h2 em{font-style:italic;color:#9eb1ff}
+    .footer-row{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-top:70px;padding-top:30px;border-top:1px solid rgba(255,255,255,.18)}
+    .footer-links{display:flex;gap:22px;flex-wrap:wrap;font-size:13px}.footer-links a{opacity:.75}.footer-links a:hover{opacity:1}
+    .copyright{font-size:11px;opacity:.5}
+
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.reveal.on{opacity:1;transform:none}
+
+    @media (max-width:1050px){
+      .hero{grid-template-columns:1fr;gap:28px;padding-top:45px}.portrait-wrap{min-height:560px}.portrait-card{max-width:490px}
+      .case,.case.copy-right{grid-template-columns:1fr}.case.copy-right .case-copy,.case.copy-right .case-visual{order:initial}.case-copy{max-width:750px}
+      .section-head{grid-template-columns:1fr;gap:12px}
+      .about-grid{grid-template-columns:1fr}.results-strip{grid-template-columns:repeat(2,1fr)}.result-cell:nth-child(2){border-right:0}.result-cell:nth-child(-n+2){border-bottom:1px solid var(--line)}
+    }
+    @media (max-width:720px){
+      .shell{width:min(100% - 28px,1440px)}
+      nav{min-height:70px}.navlinks a:not(.nav-cta){display:none}
+      .hero{min-height:auto;padding-bottom:65px}.hero h1{font-size:65px}.hero-sub{font-size:16px}.portrait-wrap{min-height:470px}.portrait-card{width:85%;}.portrait-bg{inset:35px 12px 20px 55px}.portrait-note{font-size:23px;left:4px}.system-orbit{right:0;width:110px;height:110px}
+      .section{padding:75px 0}.section-head h2{font-size:58px}.case{padding:45px 0;gap:28px}.case-copy h3{font-size:48px}.long-shot{height:480px}.scroll-hint{display:none}
+      .proof{padding:75px 0}.proof-grid{grid-template-columns:1fr}.proof-card.wide{grid-column:auto}.proof-caption{display:block}.proof-badge{display:inline-block;margin-top:16px}
+      .results-strip{grid-template-columns:1fr 1fr}.result-cell b{font-size:42px}
+      .about{padding:80px 0}.about h2{font-size:60px}.about-copy{font-size:17px}.expertise{grid-template-columns:1fr}.expertise div:nth-child(odd){padding-right:0}
+      footer{padding-top:75px}.footer-row{align-items:flex-start;flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <nav>
+      <a class="brand" href="#top">OMER SLEZOVIC</a>
+      <div class="navlinks">
+        <a href="#work">Work</a>
+        <a href="#results">Results</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="mailto:oslezovic@gmail.com">Contact ↗</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="top">
+    <section class="shell hero">
+      <div class="reveal">
+        <div class="eyebrow">Digital & Growth Marketing Strategist</div>
+        <h1>Growth is not a channel. <em>It’s a system.</em> I build it.</h1>
+        <p class="hero-sub">I connect acquisition, conversion, lifecycle and creative into marketing systems that are easier to measure, improve and scale.</p>
+        <div class="hero-meta">
+          <span class="pill">Paid acquisition</span><span class="pill">Lifecycle & retention</span><span class="pill">CRO & landing pages</span><span class="pill">AI-enabled marketing</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn primary" href="#work">View selected work ↓</a>
+          <a class="btn" href="mailto:oslezovic@gmail.com">Email me ↗</a>
+        </div>
+      </div>
+      <div class="portrait-wrap reveal">
+        <div class="portrait-bg"></div>
+        <div class="portrait-card"><img src="images/omer-slezovic.png" alt="Portrait of Omer Slezovic"></div>
+        <div class="portrait-note">Strategy.<br>Execution.<br>Iteration.</div>
+        <div class="system-orbit">Acquire<br>Convert<br>Retain</div>
+      </div>
+    </section>
+
+    <div class="statement">
+      <div class="shell ticker"><span>Paid acquisition</span><span class="dot"></span><span>Landing pages</span><span class="dot"></span><span>Lifecycle</span><span class="dot"></span><span>Organic</span><span class="dot"></span><span>AI implementation</span><span class="dot"></span><span>Measurement</span></div>
+    </div>
+
+    <section class="section shell" id="work">
+      <div class="section-head reveal">
+        <div class="eyebrow">Selected work / 01—03</div>
+        <div><h2>Work that connects the <span class="blue">whole journey.</span></h2><p>Three real web projects designed and implemented to turn complex offers into clear, conversion-focused experiences.</p></div>
+      </div>
+
+      <article class="case reveal">
+        <div class="case-copy">
+          <div class="case-num">01 / Ecommerce lead generation</div>
+          <h3>Turning a retention idea into a lead engine.</h3>
+          <p>Designed and built an ecommerce lead-magnet landing page around a simple promise: show brands the retention plays already working in their category, then adapt those ideas to their store.</p>
+          <div class="tags"><span>Landing page</span><span>CRO</span><span>Copy</span><span>HTML / implementation</span></div>
+          <p>The page prioritizes a clear offer, minimal form friction, proof, methodology and a direct next step without over-explaining before conversion.</p>
+        </div>
+        <div class="case-visual browser">
+          <div class="browser-top"><i></i><i></i><i></i><div class="browser-url">go.ecom2win.com</div></div>
+          <div class="long-shot"><img src="images/store-rescue.png" alt="Store Rescue landing page designed by Omer Slezovic"><div class="scroll-hint">Scroll inside to explore full page ↓</div></div>
+        </div>
+      </article>
+
+      <article class="case copy-right reveal">
+        <div class="case-copy">
+          <div class="case-num">02 / AI service positioning</div>
+          <h3>Making AI feel practical instead of abstract.</h3>
+          <p>Designed and implemented a landing page for an ecommerce AI implementation service, positioning AI around concrete business problems rather than technology for technology’s sake.</p>
+          <div class="tags"><span>Positioning</span><span>UX</span><span>Copy</span><span>HTML / implementation</span></div>
+          <p>The page moves from use cases to implementation depth, then to a focused diagnostic CTA: where could AI make the biggest difference in your store?</p>
+        </div>
+        <div class="case-visual browser">
+          <div class="browser-top"><i></i><i></i><i></i><div class="browser-url">ai.ecom2win.com</div></div>
+          <div class="long-shot"><img src="images/ai-implementation.png" alt="AI implementation landing page designed by Omer Slezovic"><div class="scroll-hint">Scroll inside to explore full page ↓</div></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="dark-case">
+      <div class="shell">
+        <article class="case reveal">
+          <div class="case-copy">
+            <div class="case-num">03 / Event & community website</div>
+            <h3>Structuring a content-heavy experience without losing momentum.</h3>
+            <p>Designed and implemented a long-form event website that organizes speakers, stages, partner ecosystems and programme information into a clear visual journey.</p>
+            <div class="tags"><span>Web design</span><span>Information architecture</span><span>HTML</span><span>Responsive layout</span></div>
+            <p>The challenge was density: a large amount of information had to remain navigable, premium and legible without feeling like a directory.</p>
+          </div>
+          <div class="case-visual browser">
+            <div class="browser-top"><i></i><i></i><i></i><div class="browser-url">hrweek.global</div></div>
+            <div class="long-shot"><img src="images/hr-fusion.png" alt="Fusion event website designed by Omer Slezovic"><div class="scroll-hint">Scroll inside to explore full page ↓</div></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="proof shell" id="results">
+      <div class="section-head reveal">
+        <div class="eyebrow">Performance / 04—05</div>
+        <div><h2>The work is creative. The proof is <span class="coral">numerical.</span></h2><p>Actual campaign screens from paid acquisition and cold outbound work. The point is not one lucky metric — it’s the ability to structure, test and iterate.</p></div>
+      </div>
+
+      <div class="results-strip reveal">
+        <div class="result-cell"><b>4,379</b><span>Meta link clicks</span></div>
+        <div class="result-cell"><b>3,430</b><span>Landing-page views</span></div>
+        <div class="result-cell"><b>$303.10</b><span>Total spend shown</span></div>
+        <div class="result-cell"><b>$0.07</b><span>Blended CPC</span></div>
+      </div>
+
+      <div class="proof-grid">
+        <article class="proof-card wide reveal">
+          <img src="images/meta-campaigns.png" alt="Meta Ads campaign performance managed by Omer Slezovic">
+          <div class="proof-caption"><div><h3>Paid acquisition / Meta</h3><p>Lead-generation and traffic campaigns across retention and lead-magnet offers. The strongest campaign shown reached a 3.65% CTR and $0.08 CPC, while the portfolio set delivered 4,379 link clicks at a $0.07 blended CPC.</p></div><span class="proof-badge">Real campaign data</span></div>
+        </article>
+
+        <article class="proof-card wide reveal">
+          <img src="images/smartlead-campaigns.png" alt="Smartlead outbound campaign dashboard managed by Omer Slezovic">
+          <div class="proof-caption"><div><h3>Cold outbound / Smartlead</h3><p>Segmented ecommerce prospecting by company profile and revenue, with story-angle testing and separate campaign batches for different target groups. The workflow focused on testing messaging, monitoring response signals and iterating rather than sending one generic sequence.</p></div><span class="proof-badge">Real campaign screen</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="shell about-grid reveal">
+        <div><div class="eyebrow">How I work</div><h2>I like the parts between the channels.</h2></div>
+        <div>
+          <p class="about-copy">A campaign is only as good as the page it sends people to. A landing page is only useful if tracking works. Acquisition gets expensive when retention is ignored. My strength is connecting those pieces and deciding what should happen next.</p>
+          <div class="expertise">
+            <div><b>Paid acquisition</b><br><span>Meta campaigns, testing, retargeting, measurement.</span></div>
+            <div><b>Lifecycle & retention</b><br><span>Email/SMS strategy, flows, segmentation, repeat purchase.</span></div>
+            <div><b>Landing pages & CRO</b><br><span>Offer structure, copy, forms, implementation and conversion thinking.</span></div>
+            <div><b>AI-enabled marketing</b><br><span>Practical use-case discovery, positioning and implementation workflows.</span></div>
+            <div><b>Content & organic</b><br><span>Messaging, LinkedIn content and brand-led growth.</span></div>
+            <div><b>Analytics & systems</b><br><span>Tracking, campaign diagnosis and turning data into the next decision.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">
+      <div class="eyebrow">Available for the right marketing challenge</div>
+      <h2>Need someone who can see the <em>whole funnel?</em></h2>
+      <div class="footer-row">
+        <div class="footer-links"><a href="mailto:oslezovic@gmail.com">oslezovic@gmail.com ↗</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
+        <div class="copyright">© 2026 Omer Slezovic</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); }), {threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  document.querySelectorAll('.long-shot').forEach(frame => {
+    frame.addEventListener('scroll', () => {
+      frame.classList.toggle('scrolled', frame.scrollTop > 18);
+    }, {passive:true});
+  });
+</script>
+</body>
+</html>
